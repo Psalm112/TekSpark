@@ -583,7 +583,7 @@ label{
 .button #btnSpan{
     margin-left: 10px; 
 }
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1440px){
     .navBar {
         height: 7.4%;
     }
@@ -615,7 +615,7 @@ label{
     }
     .content{
         width: 90%;
-        height: 40%;
+        height: 60%;
         left: 5%;
         top: 30%;
     }
