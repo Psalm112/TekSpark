@@ -17,7 +17,7 @@ body {
 }
 
 .preloader{
-    font-weight: bold;
+    
     font-size: 200%;
     font-family: cursive;
     color: black!important;
@@ -583,7 +583,14 @@ label{
 .button #btnSpan{
     margin-left: 10px; 
 }
-@media screen and (max-width: 1440px){
+@media screen and (max-width:1440px){
+    .content{
+        width: 90%;
+        height: 57%;
+        left: 5%;
+    }
+}
+@media screen and (max-width: 1204px){
     .navBar {
         height: 7.4%;
     }
@@ -615,7 +622,7 @@ label{
     }
     .content{
         width: 90%;
-        height: 60%;
+        height: 40%;
         left: 5%;
         top: 30%;
     }
