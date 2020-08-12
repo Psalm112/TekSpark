@@ -1,0 +1,868 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*style for preloader*/
+.preloaderbg{
+    transition: opacity 200ms ease 200ms;
+    z-index: 4;
+    background-color: white!important;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.preloader{
+    font-weight: bold;
+    font-size: 200%;
+    font-family: cursive;
+    color: black!important;
+    width: 100%;
+    height: 100%;
+    border: 0 solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left:35%
+}
+.preloader:before, .preloader:after{
+    content: '';
+    border: 10em solid blue;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left: 0;
+    right: 0;
+    animation: loader 1.5s linear infinite;
+    opacity: 0;
+}
+.preloader:before{
+    animation-delay: .5s;
+}
+
+.loadSpan1, .loadSpan2, .loadSpan3{
+    color: royalblue;
+    font-size: 200%;
+    animation: dots 1s linear infinite;
+    opacity: 0;
+}
+.loadSpan2{
+    color: red;
+    animation-delay: 0.2s;
+}
+.loadSpan3{
+    color: gold;
+    animation-delay: 0.5s;
+}
+.slideload{
+    display: block;
+    width: 40%;
+    height: 10px;
+    transform-origin: left;
+    background:linear-gradient(gold, royalblue);
+    animation: load 1s linear forwards 1.5s;
+    opacity: 0.5;
+}
+@keyframes load{
+    from{
+        transform: scale(0,1);
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes dots{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+.preload-finish{
+    opacity: 0;
+    pointer-events: none;
+}
+/*style for navbar*/
+.navBar {
+    background-color: black;
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navUl{
+    
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.navBar a{
+    text-decoration: none;
+}
+.navLink, .navUl span{
+    padding: 20px;
+    color: royalblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 120%;
+}
+.navLink:hover, .navUl span:hover, .drpbtn li a:hover{
+    background-color: royalblue;
+    color: white;
+}
+.navUl span{
+    display: inline;
+    cursor: pointer;
+}
+.drpbtn{
+    display: flex;
+}
+.drpbtn ul{
+    display: none;
+    background-color: skyblue;
+    position: absolute;
+    margin-top: 500px;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 200ms ease-in;
+    list-style: none;
+    top: 10%;
+}
+.drpbtn ul li a{
+    color: black;
+    padding: 20px;
+    display: block;
+}
+.drpbtn span:hover+.drpbtn ul{
+    transform: scale(1,1);
+}
+.logo{
+    font-size: 150%;
+    color: white;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: monospace;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.burger{
+    display: none;
+    margin-left: 20px;
+    margin-right: 50px;
+    
+}
+.burger div{
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/*style for header*/
+.slideImg {
+    width: 100%;
+    height: 100vh;
+}
+.slides{
+    color: white;
+}
+.slideText {
+    width: 50%;
+    margin: auto;
+    position: absolute;
+    left: 22%;
+    top: 70%;
+    text-align: center;
+}
+.slideText h1{
+    background-color: black; 
+    padding: 10px;
+    display: inline-block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 300%;
+    margin-bottom: 30px;
+}
+.slideText p{
+    font-size: 180%;
+}
+
+/*style for section A*/
+.section-a{
+    margin-top: 100px;
+    text-align: center;
+    
+}
+.section-a h2{
+    font-size: 200%;
+    margin-bottom: 30px;
+}
+.a-p {
+    margin: 30px 20% 80px 20%;
+    text-align: left;
+    font-size: 110%;
+    line-height: 1.5em;
+}
+.a-{
+    width: 50%;
+    margin: auto;
+}
+.a-flex{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.a-flex- {
+    width: 30%;
+}
+.section-a img{
+    margin-top: 15px;
+    width: 100%;
+}
+/*Stle for Section b*/
+.section-b{
+    background-color: black;
+    color: white;
+    margin-top: 100px; 
+    
+}
+.secbDiv {
+    width: 50%;
+    margin: auto;
+}
+.secbDiv h2{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 30px;
+}
+#i{
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.secbDiv ul{
+    list-style-type: none;
+    background-color: white;
+    color: black;
+    margin-bottom: 50px;
+}
+.secbDiv li {
+    margin-left: 10px;
+    padding: 15px;
+    font-size: 120%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 1px solid black;
+}
+.secbDiv li span {
+    margin-left: 30px;
+    text-align: center;
+    background-color: red;
+    padding: 8px 15px 5px 20px;
+    border-radius: 10px 30px 10px 50px;
+}#date {
+    margin-left: 68%;
+    border-radius: 30px 60px 10px 60px;
+    background-color: black;
+    color: white;
+    padding: 8px 20px 10px 20px;
+}
+.showcase{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    color: black;
+    padding-bottom: 100px;
+}
+.showcaseDiv{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.showcase img {
+    width: 100%;
+}
+.classpic{
+    width: 100%; 
+    background-color: black;  
+}
+.classpic img:hover{
+    opacity: 0.3;
+}
+.classpic a{
+    z-index: 1;
+    position: absolute;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(56, 73, 165);  
+}
+.classpic a:hover{
+    color: white;
+}
+.showcaseDiv h3{
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.showcaseDiv p{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.showcaseDiv:nth-child(2), .showcaseDiv:nth-child(3){
+    margin-left: 20px;
+}
+.heavyP{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 120%;
+    margin-bottom: 40px;
+}
+.enroll{
+    font-size: 120%;
+    border: none;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+}
+.enroll:hover{
+    background-color: royalblue;
+}
+/*style for section c*/
+.section-c {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+.section-c h2{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 250%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 30px;
+}
+.c-flex{
+    display: flex;
+    justify-content: space-around;
+}
+.contact{
+    font-size: 120%;
+}
+.contact p{
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.contact p .sp{
+    margin-left: 0px;
+}
+.contact p .span1{
+    display: inline-block;
+    background-image: url(image/kisspng-paper-google-map-maker-computer-icons-world-map-location-icon-5abbd6d932c7f0.286533631522259673208.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+.contact p .span2{
+    display: inline-block;
+    background-image: url(image/kisspng-telephone-call-computer-icons-symbol-phone-png-5ae0d32d41e8f0.09147581152468356527.png);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+.contact p .span3, .span3{
+    display: inline-block;
+    background-image: url(image/kisspng-ipma-email-telephone-message-email-icon-5acf36458d39e5.4305648115235292855785.png);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+.contact p a{
+    text-decoration: none;
+    color: #3399cc;
+}
+#form{
+    margin-left: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 50%;
+    font-size: 100%;
+}
+#name{
+    margin-right: 10px;
+}
+#name, #email{
+    width: 48.1%;
+    float: left;
+    margin-bottom: 10px;
+    font-size: 150%;
+    padding: 10px;
+}
+#message {
+    width: 100%;
+    font-size: 150%;
+    padding: 10px 0;
+}
+#form input:focus{
+    background-color: skyblue;
+}
+#submit{
+    font-size: 120%;
+    margin-top: 15px;
+    float: right;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+}
+#submit:hover{
+    background-color: royalblue;
+}
+.section-d{
+    background-image: url(image/pexels-fauxels-3184460.jpg);
+    
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+footer {
+    width: 50%;
+    margin: auto;
+    font-size: 120%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+footer span{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: cursive;
+}
+/*style for Pop up Section*/
+.sectionPopUp {
+    display: none;
+    top: 0;
+    position: fixed;
+    z-index: 3;
+    background-color: rgba(0,0,0,0.5);
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    animation:animatetop 0.5s}@keyframes animatetop{from{top:-300px;
+    opacity:0} to{top:0;opacity:1}
+}
+.content {
+    width: 50%;
+    height: 50%;
+    position: fixed;
+    top: 15%;
+    left: 25%;
+    background-color: white;
+}
+.header {
+    text-align: center;
+    background-color: royalblue; 
+}
+.spanPop1{
+
+    font-size: 200%;
+    padding: 10px 15px 20px 15px;
+    float: right;
+}
+.header span:hover{
+    color: white;
+    background-color: black;
+}
+.header h2{
+    font-size: 200%;
+    padding-bottom: 0px;
+    padding-top: 30px;
+}
+.header h2 span{
+    display: inline-block;
+    background-image: url(image/kisspng-paper-document-icon-paper-icon-cliparts-5a84bce5079a11.3153511915186485490311.png);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    margin-top: 0px;
+}
+.form{
+    margin-top: 20px;
+   margin-left: 20px;
+}
+.form p {
+    font-size: 120%;
+}
+.fName{
+    padding-left: 0;
+}
+.fName, .lName {
+    width: 50%;
+    float: left;
+    margin-bottom: 20px;
+}
+.form p input{
+    margin-top: 20px;
+    font-size: 150%;
+    padding: 10px ;
+}
+.mail input{
+    width: 98%;
+}
+label{
+    font-size: 120%;
+    margin-bottom: 100px;
+}
+.spanPop2{
+    display: inline-block;
+    background-image: url(image/kisspng-computer-icons-google-account-user-profile-iconfin-png-icons-download-profile-5ab0301e32cb90.1777380215214960942081.png);
+    background-size: cover;
+    width: 20px;
+    height: 20px;   
+}
+.button{
+    margin-top: 20px;
+    background-color: royalblue;
+    width: 98%;
+    display: inline-block;
+    font-size: 150%;
+    padding: 20px 0;
+    border: none;
+}
+.button:hover {
+    background-color: black;
+    color: white;
+    transition: all 200ms ease-in 50ms;
+}
+
+.btn-span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-color: white;
+    border-left: 10px solid;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.button #btnSpan{
+    margin-left: 10px; 
+}
+@media screen and (max-width: 1024px){
+    .navBar {
+        height: 7.4%;
+    }
+    .barDiv {
+        
+        width: 100%;
+    }
+    .slides{
+        height: 70vh;
+    }
+    .slideImg{
+        height: 70vh;
+    }
+    .slideText{
+        top: 40%;
+    }
+    .secbDiv{
+        width: 90%;
+
+    }
+    .section-c{
+        width: 90%;
+    }
+    .c-flex{
+        justify-content: space-between;
+    }
+    .section-d{
+        height: 70vh;
+    }
+    .content{
+        width: 90%;
+        height: 40%;
+        left: 5%;
+        top: 30%;
+    }
+    .form p{
+        font-size: 150%;
+    }
+    .fName input, .lName input{
+        width: 85%;
+    }
+    input{
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+    .button{
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 800px){
+    .logo{
+        font-size: 120%;
+        letter-spacing: 1.5px;
+    }
+}
+@media screen and (max-width: 750px){
+    body{
+        overflow-x: hidden;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+        
+    }
+    .navUl{ 
+        width: 50%;
+        height: 95vh;
+        background-color: black;
+        position: absolute;
+        left: 0;
+        top: 98%;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transform-origin: left;
+        transition: transform 0.5s ease-in;
+    }
+    .navUl li{
+        margin-top: 20px;
+
+    }
+    .navUl a{
+        width: 100%;
+    }
+    
+}
+.nav-active{
+    transform: translateX(0);
+}
+@keyframes navlink{
+    from{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.exit .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.exit .line2{
+    opacity: 0;
+}
+.exit .line3{
+    transform: rotate(45deg) translate(-5px,-6px);  
+}
+@media screen and (max-width: 600px){
+    .preloader{
+        font-size: 100%;
+    }
+    .navBar{
+        position: fixed;
+    }
+    .barDiv{
+        height: 3;
+        overflow: scrol;
+        background-color: grey;
+    }
+    .nav{
+        float: left;
+        transform: scale(1,1);
+        transition: transform 200ms ease-in 1s;
+        font-size: 120%;
+        display: block;
+        padding: 20px;
+        
+    }
+    .slides{
+        width: 100%;
+        height: 50vh;
+    }
+    .slideImg{
+        width: 100%;
+        height: 50vh;
+    }
+    .slideText{
+        top: 25%;
+    }
+    .slideText h1{
+        font-size: 150%;
+    }
+    .slideText p{
+        font-size: 100%;
+    }
+    .a-p{
+        line-height: normal;
+        font-size: 100%;
+        margin: 30px 40px;
+    }
+    .a-{
+        margin: auto;
+        width: 70%;
+        margin-top: 40px;
+    }
+    .a- p{
+        font-size: 120%;
+    }
+    .a-flex{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .a-flex-{
+        margin-top: 30px;
+        width: 100%;
+    }
+    .secbDiv li{
+        font-size: 100%;
+    }
+    #date{
+        margin-left: 20px;
+    }
+    .showcase{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .showcaseDiv{
+        margin-top: 50px;
+    }
+    .showcaseDiv:nth-child(2), .showcaseDiv:nth-child(3){
+        margin-left: 0;
+    }
+    .c-flex{
+        margin: auto;
+        width: 80%;
+        flex-direction: column;
+    }
+    .contact{
+        font-size: 100%;
+    }
+    #form{
+        margin-right: 0;
+        font-size: 80%;
+        margin-left: 0;
+        width: 100%;
+    }
+    #name, #email{
+        margin-right: 0;
+        width: 100%;
+    }
+    #message{
+        width: 100%;
+    }
+    .section-d{
+        height: 50vh;
+    }
+    footer{
+        width: 100%;
+        font-size: 100%;
+    }
+    .content{
+        width: 90%;
+        height: 70%;
+        left: 5%;
+        top: 10%;
+    }
+    .header h2{
+        font-size: 150%;
+    }
+    .header span{
+        font-size: 150%;
+    }
+    .form{
+        margin-right: 10px;
+    }
+    .form p{
+        font-size: 100%;
+    }
+    .fName, .lName{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .fName input, .lName input{
+        width: 98%;
+    }
+    .button{
+        margin-top: 10px;
+        padding: 10px 20px;
+    }
+}
+@media screen and (max-width: 350px){
+    .content{
+        width: 90%;
+        height: 85%;
+        left: 5%;
+        top: 10%;
+    }
+    .header h2{
+        font-size: 150%;
+    }
+    .header span{
+        font-size: 150%;
+    }
+    .form{
+        margin-right: 10px;
+    }
+    .form p{
+        font-size: 80%;
+    }
+    .fName, .lName{
+        float: none;
+        margin-bottom: 10px;
+    }
+    .fName input, .lName input{
+        width: 98%;
+    }
+    .button{
+        margin-top: 10px;
+        padding: 10px 20px;
+    }
+}
+@media screen and (max-height: 720px) and (min-height: 620px){
+    .content{
+        height: 80%;
+    }
+}
+@media screen and (max-height: 850px) and (min-height: 750px){
+    .content{
+        height: 65%;
+    }
+}
