@@ -18,7 +18,7 @@ let indexNum = 0;
           indexNum++;
           if (indexNum > x.length) {indexNum = 1}
           x[indexNum - 1].style.display = "block";
-          setTimeout(slide, 4000);
+          setTimeout(slide, 6000);
       }
       window.onclick = function(event) {
           if(event.target == popup){
