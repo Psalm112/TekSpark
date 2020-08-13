@@ -8,7 +8,7 @@ body {
 }
 /*style for preloader*/
 .preloaderbg{
-    transition: opacity 200ms ease 200ms;
+    transition: opacity 0.5s ease;
     z-index: 4;
     background-color: white!important;
     position: fixed;
@@ -461,16 +461,23 @@ body {
     height: 100vh;
 }
 footer {
-    width: 50%;
+    height: 150px;
+    color: white;
+    width: 100%;
+    background-color: black;
     margin: auto;
-    font-size: 120%;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    
     text-align: center;
 }
+footer div{
+    font-size: 120%;
+    padding-top: 70px;
+    width: 50%;
+    margin: auto;
+}
 footer span{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 10px;
     border-radius: 10px;
     font-family: cursive;
@@ -802,7 +809,7 @@ label{
     .section-d{
         height: 50vh;
     }
-    footer{
+    footer div{
         width: 100%;
         font-size: 100%;
     }
